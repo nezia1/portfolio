@@ -58,11 +58,11 @@
         "typst-fontawesome": "typst-fontawesome"
       },
       "locked": {
-        "lastModified": 1761914880,
-        "narHash": "sha256-c1YXw4H9XRDHSl5WWxcRmQ+UjEpNso9/Tu8b8p4YNUY=",
+        "lastModified": 1761918827,
+        "narHash": "sha256-JVSdXm4RuExu/6ks+u1gpNC3fvyggYqLpneUgpI03Es=",
         "owner": "nezia1",
         "repo": "resume",
-        "rev": "35a247c66c6097387d8fbe1d3d33864307693a7d",
+        "rev": "e4e1465e1f75a99ff6e53e27452054a6f652c67e",
         "type": "github"
       },
       "original": {
