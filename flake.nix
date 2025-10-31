@@ -30,9 +30,9 @@
       default = pkgs.mkShell {
         packages = [pkgs.zola];
         shellHook = ''
-          mkdir -p themes
-          ln -sn "${tabi}" "themes/${themeName}"
-          cp $(find ${resume.packages.${pkgs.system}.default} -name "*.pdf") static/resume.pdf
+          mkdir -p "themes/${themeName}"
+          cp -r --no-preserve=mode "${tabi}/." "themes/${themeName}/"
+          cp --no-preserve=mode ${resume.packages.${pkgs.stdenv.hostPlatform.system}.default} static/resume.pdf
         '';
       };
     });
@@ -44,9 +44,9 @@
         src = ./.;
         nativeBuildInputs = [pkgs.zola];
         configurePhase = ''
-          mkdir -p "themes/${themeName}"
-          cp -r ${tabi}/* "themes/${themeName}"
-          cp $(find ${resume.packages.${pkgs.system}.default} -name "*.pdf") static/resume.pdf
+          mkdir -p "themes"
+          cp -r "${tabi}" "themes/${themeName}"
+          cp ${resume.packages.${pkgs.stdenv.hostPlatform.system}.default} static/resume.pdf
         '';
         buildPhase = "zola build";
         installPhase = "cp -r public $out";
