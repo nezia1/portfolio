@@ -22,7 +22,7 @@
     treefmt-nix,
   }: let
     eachSystem = f: nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed f;
-    themeName = (builtins.fromTOML (builtins.readFile "${tabi}/theme.toml")).name;
+    themeName = (fromTOML (builtins.readFile "${tabi}/theme.toml")).name;
   in {
     devShells = eachSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
