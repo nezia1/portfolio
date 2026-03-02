@@ -1,15 +1,15 @@
 title = "~/nezia"
 base_url = "https://nezia.dev"
 default_language = "en"
-
 theme = "tabi"
 compile_sass = true
 build_search_index = false
-
 hard_link_static = true
 
-[markdown]
-highlight_code = true
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+style = "class"
+error_on_missing_language = true
 
 [extra]
 skin = "lavender"
@@ -17,11 +17,10 @@ favicon_emoji = "💻"
 encode_plaintext_email = true
 email = "anthony@nezia.dev"
 socials = [
-        { name = "github", url = "https://github.com/nezia1", icon = "github"}
+  { name = "github", url = "https://github.com/nezia1", icon = "github" }
 ]
 projects_path = "projects/_index.md"
-
 menu = [
-    { name = "projects", url = "projects", trailing_slash = true },
-    { name = "resume", url = "resume.pdf", trailing_slash = false }
+  { name = "projects", url = "projects", trailing_slash = true },
+  { name = "resume", url = "resume.pdf", trailing_slash = false }
 ]
